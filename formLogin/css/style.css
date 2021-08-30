@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.containerForm{
+    height: 100vh;
+    background-image: linear-gradient(45deg, #2890f7, #92bfec);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    width: 500px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+form > h3{
+    color: #3399ff;
+    font-size: 2rem;
+    text-align: center;
+    margin: 5px 0;
+}
+
+form > input, .btn-login > button{
+    width: 100%;
+    line-height: 40px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    padding-left: 20px;
+    outline: 0;
+}
+
+.btn-login > button[type='submit'],
+.btn-login > button[type='reset']{
+    margin-top: 10px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.btn-login > button[type='submit']{
+    color: white;
+    background-color:#3399ff;
+}
+
+.btn-login > button[type='submit']:hover{
+    background-color: #1f578f;
+    transition: background-color .3s;
+}
+.btn-login{
+    text-align: center;
+}
+.btn-login > span{
+    display: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: #3399ff solid 5px;
+    margin-top: 40px;
+    animation-name: loadAnimated;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes loadAnimated {
+    from{
+        transform: rotate(0deg);
+        border-top: white solid 5px;
+    }
+    to{
+        transform: rotate(360deg);
+        border-top: white solid 5px;
+    }
+}
